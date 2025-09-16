@@ -1,0 +1,24 @@
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "services": {
+    "n8n": {
+      "build": {
+        "builder": "DOCKERFILE",
+        "dockerfilePath": "n8n.Dockerfile"
+      },
+      "deploy": {
+        "startCommand": "n8n start",
+        "restartPolicyType": "ON_FAILURE"
+      }
+    },
+    "waha": {
+      "build": {
+        "builder": "DOCKERFILE", 
+        "dockerfilePath": "waha.Dockerfile"
+      },
+      "deploy": {
+        "restartPolicyType": "ON_FAILURE"
+      }
+    }
+  }
+}
