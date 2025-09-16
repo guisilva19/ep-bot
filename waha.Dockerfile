@@ -14,9 +14,6 @@ EXPOSE 3000
 # Criar diretórios para persistência
 RUN mkdir -p /app/.sessions /app/.media
 
-# Volumes para persistência de sessões e mídias
-VOLUME ["/app/.sessions", "/app/.media"]
-
 # Healthcheck para verificar se o WAHA está funcionando
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
   CMD curl -f http://localhost:3000/api/sessions || exit 1
