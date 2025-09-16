@@ -1,5 +1,8 @@
 FROM devlikeapro/waha:latest
 
+# Definir porta como variável de ambiente
+ENV PORT=3000
+
 # Porta que o Railway vai usar
 EXPOSE 3000
 
